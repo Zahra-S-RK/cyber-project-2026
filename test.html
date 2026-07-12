@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار سريع - نظام إدارة المتدربين</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .test-section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #666;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .step {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🧪 اختبار نظام إدارة المتدربين</h1>
+
+    <div class="test-section">
+        <h2>📋 خطوات الاختبار</h2>
+
+        <div class="step">
+            <strong>الخطوة 1:</strong> تأكد من تشغيل XAMPP (Apache + MySQL)
+            <div class="status info">
+                ✓ Apache يجب أن يكون Running<br>
+                ✓ MySQL يجب أن يكون Running
+            </div>
+        </div>
+
+        <div class="step">
+            <strong>الخطوة 2:</strong> تأكد من إنشاء قاعدة البيانات
+            <div class="status info">
+                ✓ اسم القاعدة: student_management<br>
+                ✓ استيراد ملف: database/setup.sql
+            </div>
+        </div>
+
+        <div class="step">
+            <strong>الخطوة 3:</strong> افتح الموقع الرئيسي
+            <button onclick="window.location.href='index.html'">🚀 افتح الموقع</button>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔍 اختبار الأزرار</h2>
+        <p>بعد فتح الموقع، جرب الضغط على كل زر:</p>
+        <ul>
+            <li>✅ لوحة التحكم - يجب أن تظهر 4 بطاقات إحصائية</li>
+            <li>✅ المتدربين - يجب أن يظهر نموذج وجدول</li>
+            <li>✅ المقررات - يجب أن يظهر نموذج وجدول</li>
+            <li>✅ التسجيلات - يجب أن يظهر نموذج وجدول</li>
+            <li>✅ سجل العمليات - يجب أن يظهر جدول السجلات</li>
+            <li>✅ الملفات - يجب أن يظهر نموذج رفع الملفات</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>🐛 فحص الأخطاء</h2>
+        <div class="status info">
+            <strong>افتح Console:</strong><br>
+            1. اضغط F12<br>
+            2. اختر تبويب "Console"<br>
+            3. تحقق من عدم وجود أخطاء حمراء
+        </div>
+
+        <h3>الأخطاء الشائعة وحلولها:</h3>
+
+        <div class="step">
+            <strong>خطأ: "Failed to fetch"</strong>
+            <div class="status error">
+                الحل: تأكد من تشغيل Apache في XAMPP
+            </div>
+        </div>
+
+        <div class="step">
+            <strong>خطأ: "Database connection failed"</strong>
+            <div class="status error">
+                الحل: تأكد من تشغيل MySQL وإنشاء قاعدة البيانات
+            </div>
+        </div>
+
+        <div class="step">
+            <strong>خطأ: "CSRF Token Validation Failed"</strong>
+            <div class="status error">
+                الحل: امسح الكاش (Ctrl+Shift+Delete) وأعد تحميل الصفحة
+            </div>
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>✅ اختبار الوظائف</h2>
+
+        <h3>1. اختبار إضافة متدرب:</h3>
+        <ol>
+            <li>اذهب إلى قسم "المتدربين"</li>
+            <li>املأ النموذج (الاسم، البريد، الهاتف)</li>
+            <li>اضغط "إضافة طالب"</li>
+            <li>يجب أن تظهر رسالة نجاح خضراء</li>
+            <li>يجب أن يظهر المتدرب في الجدول</li>
+        </ol>
+
+        <h3>2. اختبار الحذف:</h3>
+        <ol>
+            <li>اضغط زر "حذف" على أي سجل</li>
+            <li>أكد الحذف</li>
+            <li>يجب أن تظهر رسالة نجاح</li>
+            <li>يجب أن يختفي السجل من الجدول</li>
+        </ol>
+
+        <h3>3. اختبار السجلات:</h3>
+        <ol>
+            <li>اذهب إلى "سجل العمليات"</li>
+            <li>يجب أن تظهر جميع العمليات السابقة</li>
+            <li>جرب الفلاتر (إضافة/حذف/تعديل)</li>
+            <li>اضغط "التفاصيل" لرؤية البيانات الكاملة</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>📞 الدعم</h2>
+        <div class="status success">
+            <strong>إذا واجهت أي مشكلة:</strong><br>
+            1. افتح Console (F12)<br>
+            2. التقط لقطة شاشة للأخطاء<br>
+            3. تحقق من ملف TESTING_GUIDE.md للحلول
+        </div>
+    </div>
+
+    <div
+        style="text-align: center; margin-top: 30px; padding: 20px; background: #007bff; color: white; border-radius: 8px;">
+        <h2>🎉 جاهز للاختبار!</h2>
+        <button onclick="window.location.href='index.html'"
+            style="background: white; color: #007bff; font-size: 18px; padding: 15px 30px;">
+            ابدأ الاختبار الآن →
+        </button>
+    </div>
+</body>
+
+</html>
